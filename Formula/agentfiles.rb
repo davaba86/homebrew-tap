@@ -5,39 +5,29 @@
 class Agentfiles < Formula
   desc "Standardize AI coding-agent instruction files across repositories"
   homepage "https://github.com/davaba86/agentfiles"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.1/agentfiles_0.1.1_darwin_amd64.tar.gz"
-      sha256 "d3bef7a1314d922d294d05667b305ce3976af4601f9f30900c90d048b3a48b59"
+    url "https://github.com/davaba86/agentfiles/releases/download/v0.1.2/agentfiles_0.1.2_darwin_all.tar.gz"
+    sha256 "65d68963de246fa3e77f2fb613f3f9e85d80aa1aa635edc8a010038e2a423ed3"
 
-      define_method(:install) do
-        bin.install "agentfiles"
-      end
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.1/agentfiles_0.1.1_darwin_arm64.tar.gz"
-      sha256 "d61d5ee44cfdb7d3b1400996283a0cad20b15273ecd1aeda770a587c5e1a99b4"
-
-      define_method(:install) do
-        bin.install "agentfiles"
-      end
+    define_method(:install) do
+      bin.install "agentfiles"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.1/agentfiles_0.1.1_linux_amd64.tar.gz"
-      sha256 "0d779105441faef725553c08a6e08ff76101b77cf3348c0a45c3dffb37358522"
+      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.2/agentfiles_0.1.2_linux_amd64.tar.gz"
+      sha256 "75d42537a83fa649b0cad3767a5752356625f64a761c9dae74acf09216801fa1"
       define_method(:install) do
         bin.install "agentfiles"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.1/agentfiles_0.1.1_linux_arm64.tar.gz"
-      sha256 "fe198dd57b58fac1d8a88d2a228e9cc5c4f6712c7542471a8490fbfffe4213fb"
+      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.2/agentfiles_0.1.2_linux_arm64.tar.gz"
+      sha256 "d38a878ddbc7e9edd184a676f9e5cf747b5203caa136391952aca8364282dedc"
       define_method(:install) do
         bin.install "agentfiles"
       end
