@@ -5,12 +5,12 @@
 class Agentfiles < Formula
   desc "Standardize AI coding-agent instruction files across repositories"
   homepage "https://github.com/davaba86/agentfiles"
-  version "0.1.2"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
-    url "https://github.com/davaba86/agentfiles/releases/download/v0.1.2/agentfiles_0.1.2_darwin_all.tar.gz"
-    sha256 "65d68963de246fa3e77f2fb613f3f9e85d80aa1aa635edc8a010038e2a423ed3"
+    url "https://github.com/davaba86/agentfiles/releases/download/v0.1.4/agentfiles_0.1.4_darwin_all.tar.gz"
+    sha256 "f4ff36836dccfceb3df8729dcf535771bdb63bcff18dea9aaa41dc00302430a7"
 
     define_method(:install) do
       bin.install "agentfiles"
@@ -19,15 +19,15 @@ class Agentfiles < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.2/agentfiles_0.1.2_linux_amd64.tar.gz"
-      sha256 "75d42537a83fa649b0cad3767a5752356625f64a761c9dae74acf09216801fa1"
+      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.4/agentfiles_0.1.4_linux_amd64.tar.gz"
+      sha256 "3d17255cebee0628996180f51360103c188595dcb31abba9bc96e4a159c25d91"
       define_method(:install) do
         bin.install "agentfiles"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.2/agentfiles_0.1.2_linux_arm64.tar.gz"
-      sha256 "d38a878ddbc7e9edd184a676f9e5cf747b5203caa136391952aca8364282dedc"
+      url "https://github.com/davaba86/agentfiles/releases/download/v0.1.4/agentfiles_0.1.4_linux_arm64.tar.gz"
+      sha256 "e6eb5904e2ba15edbcf2d569f456fadd89350544dec6ac0295536da816d53048"
       define_method(:install) do
         bin.install "agentfiles"
       end
