@@ -1,0 +1,6 @@
+version: '3'
+tasks:
+  agents:sync:
+    desc: Pull latest agent config from mc-platform-agents submodule
+    cmds:
+      - git submodule update --remote .agent-config
